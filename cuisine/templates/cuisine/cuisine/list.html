@@ -1,0 +1,30 @@
+{% extends "cuisine/base.html" %}
+
+{% block title %}Cuisine App{% endblock %}
+
+{% block content %}
+    <h1 class="text-3xl font-bold text-blue-600 hover:text-purple-500 
+        mb-8 custom-gradient special-heading">
+        MY CUISINE SAMPLE APPLICATION
+    </h1>
+    
+    {% for cuisine in cuisines %}
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6 fade-in card-hover">
+            <h2 class="text-xl font-semibold text-blue-600 hover:text-purple-500">
+                <a class="hover:underline" href="{{ cuisine.get_absolute_url }}">
+                    {{ cuisine.name }}
+                </a>
+            </h2>
+            <p class="text-sm font-semibold text-gray-600 mt-2">
+                Published on {{ cuisine.publish }} by {{ cuisine.author }}
+            </p>
+            <div class="mt-4 text-gray-700">
+                <span class="bg-blue-100 px-3 py-1 rounded-full">{{ cuisine.type }}</span>
+                <span class="bg-green-100 px-3 py-1 rounded-full">{{ cuisine.catg }}</span>
+            </div>
+            <div class="mt-2 text-gray-600">
+                {{ cuisine.desc|truncatewords:30|linebreaks }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

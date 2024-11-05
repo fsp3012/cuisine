@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <!-- Tailwind CSS -->
+        <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+        <!--custom CSS -->
+        <link href="{% static 'cuisine/css/style.css' %}" rel="stylesheet">
+    </head>
+    <body class="bg-gray-100">
+        <div class="container mx-auto px-4 py-8">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
