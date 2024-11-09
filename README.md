@@ -41,3 +41,4 @@ This project was inspired by the Django and Tailwind CSS frameworks, which are w
 Django: A high-level Python web framework
 Tailwind CSS: A utility-first CSS framework
 # resume_project
+# resume_project
