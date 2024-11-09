@@ -3,7 +3,7 @@
 {% block title %}Cuisine App{% endblock %}
 
 {% block content %}
-    <h1 class="text-3xl font-bold text-blue-600 hover:text-purple-500 
+    <h1 class="text-3xl font-bold text-blue-600  
         mb-8 custom-gradient special-heading">
         MY CUISINE SAMPLE APPLICATION
     </h1>
@@ -27,4 +27,7 @@
             </div>
         </div>
     {% endfor %}
+    
+    <br><hr><br>
+    {% include "pagination.html" with page=page_obj %}
 {% endblock %}

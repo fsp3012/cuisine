@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cuisine
+from .models import Cuisine, Comment
 
 class CuisineAdmin(admin.ModelAdmin):
     list_display = ('name', 'author', 'created', 'publish', 'status')
@@ -11,3 +11,11 @@ class CuisineAdmin(admin.ModelAdmin):
     ordering = ['status','publish']
 
 admin.site.register(Cuisine, CuisineAdmin)
+
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'cuisine', 'created', 'active')
+    list_filter = ('active', 'created', 'updated')
+    search_fields = ('name', 'email', 'body')
+
+admin.site.register(Comment, CommentAdmin)

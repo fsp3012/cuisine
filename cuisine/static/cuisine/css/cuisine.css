@@ -11,7 +11,7 @@
 /* Override Tailwind styles if needed */
 .custom-gradient {
     background: linear-gradient(45deg, #FF6B6B, #4ECDC4) !important;
-    /* -webkit-background-clip: text !important; */
+    -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
 }
 
@@ -21,4 +21,30 @@
 }
 .card-hover:hover {
     transform: translateY(-5px) !important;
+}
+#comment-body {
+    font-style: italic !important;
+}
+
+.comment-form{
+    width: 90%;
+    max-width: 400px;
+    /* margin: 50px auto; */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
 }
